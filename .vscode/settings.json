@@ -4,6 +4,6 @@
     "csharp.format.enable": true,
     "editor.formatOnSave": true,
     "[csharp]": {
-        "editor.defaultFormatter": "ms-dotnettools.csharp"
+        "editor.defaultFormatter": "JetBrains.resharper-code"
     }
 }
