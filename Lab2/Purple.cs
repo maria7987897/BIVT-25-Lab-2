@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 
@@ -11,20 +11,18 @@ namespace Lab2
         {
             int answer = 0;
 
-            // code here
-
-            // end
-
+            for (int i = 0; i < n; i++)
+                answer += (p + n * h) * (p + n * h);
+            
+            
             return answer;
         }
-        public (int quotient, int remainder)  Task2(int a, int b)
+        public (int quotient, int remainder) Task2(int a, int b)
         {
             int quotient = 0;
             int remainder = 0;
 
-            // code here
-
-            // end
+            
 
             return (quotient, remainder);
         }
@@ -32,39 +30,66 @@ namespace Lab2
         {
             double answer = 0;
 
-            // code here
+            int prevCh = 1;
+            int prevZn = 1;
 
-            // end
+            for (int i = 1; i < 1000; i++)
+            {
+                int ch = prevCh + 1;
+                int zn = prevZn == 1 ? 1 : prevZn + 1;
 
+                if (Math.Abs(prevCh / prevZn - ch / zn) < E)
+                {
+                    answer = ch / zn;
+                    break;
+                }
+            }
+            
             return answer;
         }
         public int Task4(double b, double q)
         {
             int answer = 0;
 
-            // code here
-
-            // end
+            for (int i = 0; i < 1000; i++)
+            {
+                if (b * Math.Pow(q, i) < E)
+                {
+                    answer = i;
+                    break;
+                }
+            }
 
             return answer;
         }
         public int Task5(int a, int b)
         {
             int answer = 0;
+            long number = a;
 
-            // code here
+            while (b > 0)
+            {
+                number *= b;
+                b--;
+            }
 
-            // end
+            while (number <= 10)
+            {
+                number /= 10;
+                answer++;
+            }
 
             return answer;
         }
         public long Task6()
         {
-            long answer = 0;
+            long answer = 1;
 
-            // code here
+            double tonns = 0;    
+            for (int i = 0; i < 64; i++)
+                tonns += tonns * 2 / 15 / 1000000;
 
-            // end
+            answer = (long) Math.Floor(tonns);
 
             return answer;
         }
@@ -73,9 +98,9 @@ namespace Lab2
         {
             int answer = 0;
 
-            // code here
-
-            // end
+            double copy = S;
+            while (copy != 2 * S)
+                S += S * (1 + d / 100 / 12);
 
             return answer;
         }
@@ -84,9 +109,7 @@ namespace Lab2
             double SS = 0;
             double SY = 0;
 
-            // code here
-
-            // end
+            
 
             return (SS, SY);
         }
