@@ -17,7 +17,7 @@ namespace Lab2
             double x2 = 1;
             for (int i = 1; i <= n; i++)
             {
-                answer += Sin(i*x)/x2;
+                answer += Sin(i * x) / x2;
                 x2 *= x;
             }
             // end
@@ -51,7 +51,7 @@ namespace Lab2
             int x1 = 0;
             int x2 = 1;
             int t = 0;
-            for (int i = 0; i <= n-2; i++)
+            for (int i = 0; i <= n - 2; i++)
             {
                 answer += x2;
                 t = x1;
@@ -130,7 +130,7 @@ namespace Lab2
             while (days < 7)
             {
                 days++;
-                S = S + S * I/100;
+                S = S + S * I / 100;
                 a += S;
             }
 
@@ -164,26 +164,29 @@ namespace Lab2
             // code here
 
             double x = a;
-            while (Math.Round(x, 3) <= b)
+            while (x <= b+ 1e-10)
             {
                 double x2 = 1;
                 int i = 0;
                 int i2 = 1; //factorial
-                while (Math.Abs(((2 * i + 1) * x2) / i2) >= E)
-                {
-                    SS += ((2 * i + 1) * x2) / i2;
-                    i++;
-                    x2 *= x * x;
-                    i2 *= i;
-                }
-                SY += (1 + 2 * x * x) * Math.Pow(Math.E, x * x);
-                x += h;
-                x = Math.Round(x, 3);
-            }
+                double s = 0;
 
-            //Console.WriteLine("258,18735");
-            //(258,1846376466548, 258,18752739383774)
-            //выходит такой ответ, совершенно не понимаю как исправлять
+                do
+                {
+                    if (i > 0)
+                    {
+                        i2 *= i;
+                    }
+                    SS += ((2 * i + 1) * x2) / i2;
+                    x2 *= x * x;
+                    i++;
+                }
+                while (Math.Abs(((2 * i + 1) * x2) / i2) >= E);
+
+                SY += (1 + 2 * x * x) * Math.Exp(x*x);
+                x += h;
+
+            }
 
             // end
 
