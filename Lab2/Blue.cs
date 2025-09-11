@@ -162,22 +162,29 @@ namespace Lab2
             double SY = 0;
 
             // code here
+
             double x = a;
-            while (Math.Round(x, 7) <= b) 
+            while (Math.Round(x, 3) <= b)
             {
                 double x2 = 1;
                 int i = 0;
-                int i2 = 1;
-                while (Math.Abs(((2*i + 1) * x2)/i2) >= 0.0001)
+                int i2 = 1; //factorial
+                while (Math.Abs(((2 * i + 1) * x2) / i2) >= E)
                 {
                     SS += ((2 * i + 1) * x2) / i2;
-                    SY += (1 + 2 * x * x) * Math.Pow(Math.E, x * x);
                     i++;
-                    x2 *= x*x;
+                    x2 *= x * x;
                     i2 *= i;
                 }
+                SY += (1 + 2 * x * x) * Math.Pow(Math.E, x * x);
                 x += h;
+                x = Math.Round(x, 3);
             }
+
+            //Console.WriteLine("258,18735");
+            //(258,1846376466548, 258,18752739383774)
+            //выходит такой ответ, совершенно не понимаю как исправлять
+
             // end
 
             return (SS, SY);
