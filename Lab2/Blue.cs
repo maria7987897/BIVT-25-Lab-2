@@ -148,12 +148,13 @@ namespace Lab2
 
             for (double x = a; x <= b; x += h) 
             {
-
+                x = Math.Round(x, 2);
                 int i = 1, k = 1;
                 double S = 0, c;
                 c = 1;
                 while (c >= E)
                 {
+                   
                     S += c;
                     c = (2 * i + 1) * Math.Pow(x, 2 * i) / k;
                     i++;
@@ -165,6 +166,7 @@ namespace Lab2
 
             for (double x = a; x <= b; x += h)
             {
+                x = Math.Round(x, 2);
                 SY += (1 + 2 * Math.Pow(x, 2)) * Math.Pow(Math.E, Math.Pow(x, 2));
             }
 
