@@ -2,7 +2,6 @@ namespace Lab2
 {
     public class White
     {
-        const double E = 0.0001;
         public int Task1(int n)
         {
             int answer = 0;
@@ -62,7 +61,7 @@ namespace Lab2
             answer = s;  
             }               
             // end
-
+            
             return answer;
         }
         public int Task5(int L)
@@ -85,12 +84,14 @@ namespace Lab2
         public double Task6(double x)
         {
             double answer = 0;
-
+            const double E = 0.0001;
 
             // code here
-            for (int i = 0; Math.Pow(x, i * 2) < 0.0001; i++)
+            double s = 1;
+            while (s >= E)
             {
-                answer += Math.Pow(x, i*2);
+                answer += s;
+                s *= x * x;
             }
             // end
 
@@ -117,7 +118,8 @@ namespace Lab2
             const double R = 6371.0; // радиус Земли, км
 
             // code here
-
+            double t = ((Math.Sqrt(R*R + L*L)) - R )/ v;
+            answer = (int)Math.Ceiling(t);
             // end
 
             return answer;
