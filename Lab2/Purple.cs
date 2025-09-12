@@ -13,6 +13,10 @@ namespace Lab2
 
             // code here
 
+            for (int i=0; i<h; i++) {
+                answer += (p+i*h)*(p+i*h) ;
+            }
+
             // end
 
             return answer;
@@ -24,6 +28,9 @@ namespace Lab2
 
             // code here
 
+            while () { 
+
+            }
             // end
 
             return (quotient, remainder);
