@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Numerics;
 using System.Runtime.InteropServices;
+using static System.Math;
 
 namespace Lab2
 {
@@ -12,7 +14,12 @@ namespace Lab2
             double answer = 0;
 
             // code here
-
+            double x2 = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                answer += Sin(i * x) / x2;
+                x2 *= x;
+            }
             // end
 
             return answer;
@@ -22,7 +29,16 @@ namespace Lab2
             double answer = 0;
 
             // code here
+            double Factorial = 1;
+            double x = -5;
+            double x2 = -5;
+            for (int i = 1; i <= n; i++)
+            {
 
+                Factorial *= i;
+                answer += x2 / Factorial;
+                x2 *= x;
+            }
             // end
 
             return answer;
@@ -32,7 +48,16 @@ namespace Lab2
             long answer = 0;
 
             // code here
-
+            int x1 = 0;
+            int x2 = 1;
+            int t = 0;
+            for (int i = 0; i <= n - 2; i++)
+            {
+                answer += x2;
+                t = x1;
+                x1 = x2;
+                x2 += t;
+            }
             // end
 
             return answer;
@@ -42,7 +67,13 @@ namespace Lab2
             int answer = 0;
 
             // code here
-
+            int s = 0;
+            while (s <= L)
+            {
+                s += a + (answer * h);
+                answer++;
+            }
+            answer--;
             // end
 
             return answer;
@@ -52,9 +83,20 @@ namespace Lab2
             double answer = 0;
 
             // code here
-
+            double ch = 0;
+            double zn = 1;
+            double elem = ch / zn;
+            int i = 1;
+            do
+            {
+                ch += i;
+                zn *= x;
+                answer += elem;
+                elem = ch / zn;
+                i++;
+            }
+            while (elem > 0.0001 || i == 1);
             // end
-
             return answer;
         }
         public int Task6(int h, int S, int L)
@@ -62,7 +104,11 @@ namespace Lab2
             int answer = 0;
 
             // code here
-
+            while (S < L)
+            {
+                S *= 2;
+                answer += h;
+            }
             // end
 
             return answer;
@@ -75,6 +121,37 @@ namespace Lab2
 
             // code here
 
+            int days = 1;
+            double km = 0;
+            double kmPerDay = 0;
+            double t = S;
+
+            a = S;
+            while (days < 7)
+            {
+                days++;
+                S = S + S * I / 100;
+                a += S;
+            }
+
+            S = t;
+            km = S;
+            b = 1;
+            while (km <= 100)
+            {
+                S = S + S * I / 100;
+                km += S;
+                b++;
+            }
+
+            S = t;
+            kmPerDay = S;
+            while (kmPerDay <= 42)
+            {
+                S = S + S * I / 100;
+                kmPerDay = S;
+                c++;
+            }
             // end
 
             return (a, b, c);
@@ -85,6 +162,31 @@ namespace Lab2
             double SY = 0;
 
             // code here
+
+            double x = a;
+            while (x <= b+ 1e-10)
+            {
+                double x2 = 1;
+                int i = 0;
+                int i2 = 1; //factorial
+                double s = 0;
+
+                do
+                {
+                    if (i > 0)
+                    {
+                        i2 *= i;
+                    }
+                    SS += ((2 * i + 1) * x2) / i2;
+                    x2 *= x * x;
+                    i++;
+                }
+                while (Math.Abs(((2 * i + 1) * x2) / i2) >= E);
+
+                SY += (1 + 2 * x * x) * Math.Exp(x*x);
+                x += h;
+
+            }
 
             // end
 
