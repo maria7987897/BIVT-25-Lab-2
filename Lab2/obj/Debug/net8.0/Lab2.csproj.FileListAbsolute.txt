@@ -1,0 +1,15 @@
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\bin\Debug\net8.0\Lab2.exe
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\bin\Debug\net8.0\Lab2.deps.json
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\bin\Debug\net8.0\Lab2.runtimeconfig.json
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\bin\Debug\net8.0\Lab2.dll
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\bin\Debug\net8.0\Lab2.pdb
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\Lab2.AssemblyInfoInputs.cache
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\Lab2.AssemblyInfo.cs
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\Lab2.sourcelink.json
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\Lab2.dll
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\refint\Lab2.dll
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\Lab2.pdb
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\Lab2.genruntimeconfig.cache
+C:\Users\freak\Source\Repos\BIVT-25-Lab-2\Lab2\obj\Debug\net8.0\ref\Lab2.dll
