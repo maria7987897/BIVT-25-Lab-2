@@ -120,44 +120,46 @@ namespace Lab2
 
             return answer;
         }
+         public static long Fact(int n)
+        {
+            if (n == 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return n * Fact(n - 1);
+            }
+        }
+        public static double GetPow(double n, int j)
+        {
+            if (j == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return n * GetPow(n, j - 1);
+            }
+        }
         public (double SS, double SY) Task8(double a, double b, double h)
         {
-            static long Fact(int n)
-            {
-                if (n == 1)
-                {
-                    return 1;
-                }
-                else
-                {
-                    return n * Fact(n - 1);
-                }
-            }
-            static double GetPow(double n, int i)
-            {
-                if (i == 0)
-                {
-                    return 1;
-                }
-                else
-                {
-                    return n * GetPow(n, i - 1);
-                }
-            }
+           
             double SS = 0;
             double SY = 0;
-            int i = 1;
-            double temp = 0.5;
             // code here
-            for (double x = a; x <= b; x += h)
+            int i;
+            double temp;
+            for (double x = a; x <= b + 0.000000001; x += h) // I hate floating-point calculations
             {
                 i = 1;
                 SY += Math.Cos(x);
-                temp = 0.5;
-                while (Math.Abs(temp) >= 0.0001)
+                temp = 1;
+                while (Math.Abs(temp) >= 0.00001)
                 {
                     SS += temp;
-                    temp = GetPow(-1, i) * GetPow(x, 2 * i) / Fact(2 * i);
+                    temp = GetPow((-1), i) * GetPow(x, (int)(2 * i)) / Fact(2 * i);
+                    i++;
                 }
             }
             // end
