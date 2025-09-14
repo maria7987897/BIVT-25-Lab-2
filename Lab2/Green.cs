@@ -42,6 +42,18 @@ namespace Lab2
 
             // code here
 
+            double x_pw = x;
+            int i = 1;
+            double eps = 1e-4;
+            double elem = Math.Sin(x_pw * i);
+            while (Math.Abs(elem) >= eps)
+            {
+                answer += elem;
+                x_pw *= x;
+                i++;
+                elem = Math.Sin(x_pw * i);
+            }
+
             // end
 
             return answer;
