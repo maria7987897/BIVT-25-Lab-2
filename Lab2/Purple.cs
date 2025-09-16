@@ -151,6 +151,7 @@ namespace Lab2
             
             for (double x = a; x <= b; x += h)
             {
+                x = Math.Round(x, 5);
                 int i = 0;
                 while (true)
                 {
