@@ -143,11 +143,6 @@ namespace Lab2
             if (p == 0) return 1.0;
             return a * DoublePow(a, p - 1);
         }
-        public double Fuct(double n)
-        {
-            if (n == 1.0) return n;
-            return Fuct(n - 1) * n;
-        }
         public (double SS, double SY) Task8(double a, double b, double h)
         {
             double SS = 0;
@@ -161,8 +156,11 @@ namespace Lab2
                 {
                     double el = i % 2 == 0 ? 1 : -1;
                     el *= DoublePow(x, 2 * i);
-                    double fact = Fuct(2 * i);
-                    
+                    double fact = 1;
+                    for (int j = 1; j <= 2 * i; j++)
+                    {
+                        fact *= j;
+                    }
                     el /= fact;
                     SS += el;
                     if (Math.Abs(el) < E) break;
