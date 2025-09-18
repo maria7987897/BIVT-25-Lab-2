@@ -120,28 +120,6 @@ namespace Lab2
 
             return answer;
         }
-         public static long Fact(int n)
-        {
-            if (n == 1)
-            {
-                return 1;
-            }
-            else
-            {
-                return n * Fact(n - 1);
-            }
-        }
-        public static double GetPow(double n, int j)
-        {
-            if (j == 0)
-            {
-                return 1;
-            }
-            else
-            {
-                return n * GetPow(n, j - 1);
-            }
-        }
         public (double SS, double SY) Task8(double a, double b, double h)
         {
            
@@ -158,7 +136,7 @@ namespace Lab2
                 while (Math.Abs(temp) >= 0.00001)
                 {
                     SS += temp;
-                    temp = GetPow((-1), i) * GetPow(x, (int)(2 * i)) / Fact(2 * i);
+                    temp = temp * (-1) * x * x / (i * 2) / (i * 2 - 1);
                     i++;
                 }
             }
@@ -168,3 +146,4 @@ namespace Lab2
         }
     }
 }
+
