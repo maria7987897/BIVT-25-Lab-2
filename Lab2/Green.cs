@@ -77,14 +77,13 @@ namespace Lab2
         }
         public int Task5(double x)
         {
-            int answer = 0;
+            int answer = 1;
             // code here
-            int n = 0;
-            double s = 1000;
-            while (s > E)
+            double x1 = x;
+            while (Math.Abs(1 / x1 - x / x1) >= E)
             {
-                s = Math.Abs(Math.Pow(x, -(n - 1)) - Math.Pow(x, -n));
-                n++;
+                answer++;
+                x1 *= x;
             }
             // end
             return answer;
@@ -122,7 +121,7 @@ namespace Lab2
             double SY = 0;
             
             // code here
-            for (double x = a; x <= b + axaxa; x += h)
+            for (double x = a; x <= b + 1e-9; x += h)
             {
                 double s = 0;
                 double x2 = x;
