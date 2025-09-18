@@ -200,6 +200,7 @@ namespace Lab2
                 double e = Math.E;
                 double fi = Math.Pow(x, 2);
                 SY += (1 + (2 * fi)) * Math.Pow(e, fi);
+                SS = SY;
             }
             // end
 
