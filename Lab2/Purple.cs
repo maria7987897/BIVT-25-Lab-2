@@ -161,7 +161,7 @@ namespace Lab2
                     {
                         fact *= j;
                     }
-                    
+                    // 
                     el /= fact;
                     SS += el;
                     if (Math.Abs(el) < E) break;
@@ -174,4 +174,5 @@ namespace Lab2
         }
     }
 }
+
 
