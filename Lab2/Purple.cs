@@ -74,9 +74,19 @@ namespace Lab2
         {
             int answer = 0;
 
+            double myPow(double x, int n)
+            {
+                double S = 1;
+                for (int i = 0; i < n; i++)
+                {
+                    S *= x;
+                }
+                return S;
+            }
+
             // code here
             int n = 0;
-            while ((Math.Abs(b * Math.Pow(q, n)) >= 0.0001)) n++;
+            while ((Math.Abs(b * myPow(q, n)) >= 0.0001)) n++;
             answer = n + 1;
             // end
 
@@ -110,8 +120,18 @@ namespace Lab2
         {
             long answer = 0;
 
+            double myPow(double x, int n)
+            {
+                double S = 1;
+                for (int i = 0; i < n; i++)
+                {
+                    S *= x;
+                }
+                return S;
+            }
+            
             // code here
-            answer = (long)(Math.Pow(2, 64) / 15 / 1_000_000);
+            answer = (long)(myPow(2, 64) / 15 / 1_000_000);
             // end
 
             return answer;
@@ -142,6 +162,16 @@ namespace Lab2
             double SY = 0;
 
             // code here
+            double myPow(double x, int n)
+            {
+                double S = 1;
+                for (int i = 0; i < n; i++)
+                {
+                    S *= x;
+                }
+                return S;
+            }
+            
             static double Fact(int n)
             {
                 int res = 1;
@@ -155,7 +185,7 @@ namespace Lab2
                 int i = 0;
                 while (true)
                 {
-                    double el = Math.Pow(-1, i) * (Math.Pow(x, 2*i) / Fact(2*i));
+                    double el = myPow(-1, i) * (myPow(x, 2*i) / Fact(2*i));
                     SS += el;
                     if (Math.Abs(el) < 0.0001) break;
                     i++;
