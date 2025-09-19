@@ -165,13 +165,12 @@ namespace Lab2
             double SY = 0;
 
             // code here
-            const double e = 0.0001;
             double x = a;
-            while (x <= b + e)
+            while (x <= b + E)
             {
                 double elem = 1.0;
                 SS += elem;
-                for (int i = 1; Math.Abs(elem) >= e; ++i)
+                for (int i = 1; Math.Abs(elem) >= E; ++i)
                 {
                     elem = elem * x * x * (2 * i + 1) / (i * (2 * i - 1));
                     SS += elem;
