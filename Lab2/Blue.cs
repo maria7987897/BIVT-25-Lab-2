@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;
 
 namespace Lab2
@@ -12,7 +14,13 @@ namespace Lab2
             double answer = 0;
 
             // code here
-
+            double pow = 1;
+            answer = Math.Sin(x);
+            for (int i = 2; i < n + 1; i++)
+            {
+                pow *= x;
+                answer += (Math.Sin(x * i) / pow);
+            }
             // end
 
             return answer;
@@ -22,7 +30,16 @@ namespace Lab2
             double answer = 0;
 
             // code here
-
+            double pow1 = 1;
+            double pow5 = 1;
+            double fractN = 1;
+            for (int i = 1; i < n + 1; i++)
+            {
+                pow1 *= -1;
+                pow5 *= 5;
+                fractN *= i;           
+                answer += pow1 * (pow5 / fractN);
+            }
             // end
 
             return answer;
@@ -32,7 +49,10 @@ namespace Lab2
             long answer = 0;
 
             // code here
-
+            for (int i = 0; n > i; i++)
+            {
+                
+            }
             // end
 
             return answer;
@@ -42,7 +62,13 @@ namespace Lab2
             int answer = 0;
 
             // code here
-
+            int s = 0;
+            while (s <= L)
+            {
+                answer++;
+                s += (a + ((answer - 1) * h));
+            }
+            answer--;
             // end
 
             return answer;
