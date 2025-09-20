@@ -6,85 +6,68 @@ namespace Lab2
     {
         const double E = 0.0001;
         const double Da = 0.0000000001;
-        const double axaxa = 1e-9;
         public double Task1(int n)
         {
             double answer = 0;
-
             // code here
-            double N = double.Parse(Console.ReadLine());
-            double ans = 0.0;
-            for (int i = 1; i <= N; i+=2)
+            for (double i = 2.0; i <= n; i += 2)
             {
-                double f = 2.0 * i;
-                double l = 2.0 * i + 1.0;
-                ans += f / l;
+                double a = i / (i + 1);
+                answer += a;
             }
-            Console.WriteLine(Math.Round(ans, 6));
             // end
             return answer;
         }
         public double Task2(int n, double x)
         {
             double answer = 0;
-
             // code here
-            double summ = 0.0;
             for (int i = 0; i <= n; i++)
             {
-                summ += Math.Pow(x, -i);
+                answer += Math.Pow(x, -i);
             }
-            Console.WriteLine(summ);
             // end
             return answer;
         }
         public long Task3(int n)
         {
-            long answer = 0;
-
+            long answer = 1;
             // code here
-            int k = int.Parse(Console.ReadLine());
-            long summ = 0;
-            long f = 1;
-            for (int i = 1; i <= k; i++)
+            long fact = 1;
+            for (int i = 1; i <= n; i++)
             {
-                f *= i;  
-                summ += f;    
+                answer += fact * i;
+                fact = fact * i;
             }
-            Console.WriteLine(summ);
             // end
             return answer;
         }
         public double Task4(double x)
         {
             double answer = 0;
-
             // code here
-            double y = double.Parse(Console.ReadLine());
-            double eps = 0.001;
-            double summ = 0;
-            int k = 1;
-            while (true)
+            int i = 1;
+            while (Math.Abs(Math.Sin(i * Math.Pow(x, i))) > E)
             {
-                double term = Math.Sin(k * Math.Pow(y, k));
-                if (Math.Abs(term) < eps) break;
-                summ += term;
-                k++;
+                answer += Math.Sin(i * Math.Pow(x, i));
+                i++;
             }
-            Console.WriteLine(summ);
             // end
             return answer;
         }
         public int Task5(double x)
         {
-            int answer = 1;
+            int answer = 0;
             // code here
-            double x1 = x;
-            while (Math.Abs(1 / x1 - x / x1) >= E)
+            int n = 0;
+            while (true)
             {
-                answer++;
-                x1 *= x;
+                double l = 1.0 / Math.Pow(x, n);
+                double r = 1.0 / Math.Pow(x, n - 1);
+                if (Math.Abs(l - r) < E) {break;}
+                n++;
             }
+            answer = n;
             // end
             return answer;
         }
@@ -119,7 +102,7 @@ namespace Lab2
         {
             double SS = 0;
             double SY = 0;
-            
+
             // code here
             for (double x = a; x <= b + 1e-9; x += h)
             {
