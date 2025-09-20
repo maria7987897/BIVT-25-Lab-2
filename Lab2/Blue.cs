@@ -155,6 +155,7 @@ namespace Lab2
             while (el > E)
             {
                 break;
+                //cock
             }
             // end
 
