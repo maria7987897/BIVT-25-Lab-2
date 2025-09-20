@@ -149,6 +149,7 @@ namespace Lab2
             double SY = 0;
 
             // code here
+            int temp = 0;
             for (int k = 0; a + k * h <= b; k++)
             {
                 double x = a + k * h;
@@ -161,6 +162,7 @@ namespace Lab2
                     {
                         fact *= j;
                     }
+                    temp += 1;
                     el /= fact;
                     SS += el;
                     if (Math.Abs(el) < E) break;
@@ -173,3 +175,6 @@ namespace Lab2
         }
     }
 }
+
+
+
