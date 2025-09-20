@@ -1,11 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
-using System.Globalization;
-using System.Reflection.Emit;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-
-namespace Lab2
+﻿namespace Lab2
 {
     public class Purple
     {
@@ -195,4 +188,5 @@ namespace Lab2
             return (SS, SY);
 }
     }
+
 }
