@@ -10,9 +10,12 @@ namespace Lab2
         public int Task1(int n, int p, int h)
         {
             int answer = 0;
-
+            
             // code here
-
+            for (int i = 0; i < n; i++)
+            {
+                answer += (p + i*h) * (p + i*h);
+            }
             // end
 
             return answer;
@@ -23,7 +26,13 @@ namespace Lab2
             int remainder = 0;
 
             // code here
-
+            while (a - b >= 0)
+            {
+                a -= b;
+                quotient++;
+            }
+            remainder = a;
+            
             // end
 
             return (quotient, remainder);
@@ -33,7 +42,30 @@ namespace Lab2
             double answer = 0;
 
             // code here
-
+            double ch1 = 2;
+            double zn1 = 1;
+            double ch2 = 3;
+            double zn2 = 2;
+   
+            while (true)
+            {
+                Console.WriteLine($"{ch1}/{zn1}, {ch2}/{zn2}, {Math.Abs(ch1 / zn1 - ch2 / zn2)}");
+                if (Math.Abs(ch1 / zn1 - ch2 / zn2) < 0.0001)
+                {
+                    answer = ch2 / zn2;
+                    break;
+                }
+                else
+                {
+                    var a = ch2;
+                    var b = zn2;
+                    ch2 += ch1;
+                    zn2 += zn1;
+                    ch1 = a;
+                    zn1 = b;
+                }
+                    
+            }
             // end
 
             return answer;
@@ -42,18 +74,44 @@ namespace Lab2
         {
             int answer = 0;
 
-            // code here
+            double myPow(double x, int n)
+            {
+                double S = 1;
+                for (int i = 0; i < n; i++)
+                {
+                    S *= x;
+                }
+                return S;
+            }
 
+            // code here
+            int n = 0;
+            while ((Math.Abs(b * myPow(q, n)) >= 0.0001)) n++;
+            answer = n + 1;
             // end
 
             return answer;
         }
+
         public int Task5(int a, int b)
         {
             int answer = 0;
 
             // code here
+            long number = a;
+            
+            while (b > 0)
+            {
+                number *= b;
+                b--;
+            }
 
+            while (number >= 10)
+            {
+                number /= 10;
+                answer++;
+            }
+            
             // end
 
             return answer;
@@ -62,8 +120,18 @@ namespace Lab2
         {
             long answer = 0;
 
+            double myPow(double x, int n)
+            {
+                double S = 1;
+                for (int i = 0; i < n; i++)
+                {
+                    S *= x;
+                }
+                return S;
+            }
+            
             // code here
-
+            answer = (long)(myPow(2, 64) / 15 / 1_000_000);
             // end
 
             return answer;
@@ -74,7 +142,16 @@ namespace Lab2
             int answer = 0;
 
             // code here
-
+            int month = 0;
+            double startS = S;
+            double X2S = S * 2;
+            while (S < X2S)
+            {
+                S += startS * d / 100 / 12;
+                if (month % 12 == 0) startS = S;
+                month++;
+            }
+            answer = month;
             // end
 
             return answer;
@@ -85,7 +162,38 @@ namespace Lab2
             double SY = 0;
 
             // code here
-
+            double myPow(double x, int n)
+            {
+                double S = 1;
+                for (int i = 0; i < n; i++)
+                {
+                    S *= x;
+                }
+                return S;
+            }
+            
+            static double Fact(int n)
+            {
+                int res = 1;
+                for (int i = 1; i <= n; i++) res *= i;
+                return res;
+            }
+            
+            for (double x = a; x <= b; x += h)
+            {
+                x = Math.Round(x, 5);
+                int i = 0;
+                while (true)
+                {
+                    double el = myPow(-1, i) * (myPow(x, 2*i) / Fact(2*i));
+                    SS += el;
+                    if (Math.Abs(el) < 0.0001) break;
+                    i++;
+                }
+                
+                SY += Math.Cos(x);
+            }
+            
             // end
 
             return (SS, SY);
