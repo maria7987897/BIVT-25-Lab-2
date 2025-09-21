@@ -1,4 +1,6 @@
-﻿namespace Lab2
+using System.ComponentModel.Design;
+
+namespace Lab2
 {
     public class White
     {
@@ -7,59 +9,77 @@
         {
             int answer = 0;
 
-            // code here
-
-            // end
-
+            
+            int s = 0;
+            for (int i = 1; i <=n; i++)
+            {
+                s += 3 * i - 1;
+                
+            }
+            answer = s;
             return answer;
         }
         public double Task2(int n)
         {
             double answer = 0;
+            
+            double s = 0.0;
+            for (int i = 1; i <= n; i++)
+            {
+                s += 1.0 / i;
 
-            // code here
+            }
+            answer = s;
 
-            // end
 
             return answer;
         }
         public long Task3(int n)
         {
             long answer = 0;
-
-            // code here
-
-            // end
+            long s = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                s *= i;
+            }
+            answer = s;
 
             return answer;
         }
         public long Task4(int a, int b)
         {
             long answer = 0;
+            long s = 1;
+            for (int i = 1; i <= b; i++)
+            {
 
-            // code here
-
-            // end
+                s *=a;
+            }
+            answer = s;
 
             return answer;
         }
         public int Task5(int L)
         {
             int answer = 0;
-
-            // code here
-
-            // end
+            int b = 1;
+            int p = 1;
+            while (p <= L)
+            {
+                b += 3;
+                p = p * b;
+            }
+            answer = b;
 
             return answer;
         }
         public double Task6(double x)
         {
             double answer = 0;
-
-            // code here
-
-            // end
+            double s = 1;
+            double eps = 0.0001;
+            while ()
+            
 
             return answer;
         }
@@ -88,3 +108,4 @@
     }
 
 }
+=
