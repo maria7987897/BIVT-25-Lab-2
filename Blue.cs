@@ -8,7 +8,7 @@ namespace Lab2
 {
     public class Blue
     {
-        const double E = 0.0001;
+
         public double Task1(int n, double x)
         {
             double answer = 0;
