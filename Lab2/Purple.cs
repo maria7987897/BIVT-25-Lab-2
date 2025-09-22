@@ -13,55 +13,59 @@ namespace Lab2
 
             for (int i = 0; i < n; i++)
                 answer += (p + n * h) * (p + n * h);
-            
-            
+
             return answer;
         }
         public (int quotient, int remainder) Task2(int a, int b)
         {
             int quotient = 0;
-            int remainder = 0;
+            int remainder = a;
 
-            
+            while (remainder >= b)
+            {
+                remainder -= b;
+                quotient++;
+            }
 
             return (quotient, remainder);
         }
         public double Task3()
         {
-            double answer = 0;
+            double prevCh = 1;
+            double prevZn = 1;
+            double prevPrevCh = 1;
+            double prevPrevZn = 1;
 
-            int prevCh = 1;
-            int prevZn = 1;
-
-            for (int i = 1; i < 1000; i++)
+            while (true)
             {
-                int ch = prevCh + 1;
-                int zn = prevZn == 1 ? 1 : prevZn + 1;
+                double currentCh = prevCh + prevPrevCh;
+                double currentZn = prevZn + prevPrevZn;
 
-                if (Math.Abs(prevCh / prevZn - ch / zn) < E)
-                {
-                    answer = ch / zn;
-                    break;
-                }
+                if (Math.Abs(currentCh / currentZn - prevCh / prevZn) < E)
+                    return currentCh / currentZn;
+
+                prevPrevCh = prevCh;
+                prevPrevZn = prevZn;
+                prevCh = currentCh;
+                prevZn = currentZn;
             }
-            
-            return answer;
+
         }
+
         public int Task4(double b, double q)
         {
-            int answer = 0;
+            int i = 0;
+            double qi = 1;
 
-            for (int i = 0; i < 1000; i++)
+            while (b * qi >= E)
             {
-                if (b * Math.Pow(q, i) < E)
-                {
-                    answer = i;
-                    break;
-                }
+                qi *= q;
+                i++;
             }
 
-            return answer;
+            return i;
         }
+
         public int Task5(int a, int b)
         {
             int answer = 0;
@@ -83,33 +87,40 @@ namespace Lab2
         }
         public long Task6()
         {
-            long answer = 1;
+            double totalSeeds = 0;
+            double currentSeeds = 1;
 
-            double tonns = 0;    
             for (int i = 0; i < 64; i++)
-                tonns += tonns * 2 / 15 / 1000000;
+            {
+                totalSeeds += currentSeeds;
+                currentSeeds *= 2;
+            }
 
-            answer = (long) Math.Floor(tonns);
-
-            return answer;
+            double totalTons = totalSeeds / 15.0 / 1000000.0;
+            return (long)Math.Floor(totalTons);
         }
 
         public int Task7(double S, double d)
         {
-            int answer = 0;
-
             double copy = S;
-            while (copy != 2 * S)
-                S += S * (1 + d / 100 / 12);
+            double monthlyRate = d / 100.0 / 12.0;
+            int months = 0;
 
-            return answer;
+            while (copy < 2.0 * S)
+            {
+                copy *= (1.0 + monthlyRate);
+                months++;
+            }
+
+            return months;
         }
+
         public (double SS, double SY) Task8(double a, double b, double h)
         {
             double SS = 0;
             double SY = 0;
 
-            
+
 
             return (SS, SY);
         }
