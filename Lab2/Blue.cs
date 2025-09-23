@@ -9,7 +9,7 @@ namespace Lab2
         const double E = 0.0001;
         public double Task1(int n, double x)
         {
-            double answer = 0;
+            double answer = 1;
 
             // code here
 
@@ -91,4 +91,5 @@ namespace Lab2
             return (SS, SY);
         }
     }
+
 }
