@@ -125,7 +125,7 @@ namespace Lab2
 
             for (double x = a; x <= b + E; x += h)
             {
-                double sum_series = 0;
+                double sum = 0;
                 int i = 0;
                 double term = 1;
                
@@ -142,11 +142,11 @@ namespace Lab2
                         second *= x;
 
                     term = first * second / factorial;
-                    sum_series += term;
+                    sum += term;
                     i++;
                 } 
 
-                SS += sum_series;
+                SS += sum;
                 SY += Math.Cos(x);
             }
 
