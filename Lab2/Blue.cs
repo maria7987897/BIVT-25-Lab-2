@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq.Expressions;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Lab2
 {
@@ -12,18 +11,28 @@ namespace Lab2
         public double Task1(int n, double x)
         {
             double answer = 0;
-            // code here
 
+            double x_pow = 1;
+            // code here
+            for (int i = 1; i <= n; i++) {
+                answer += Math.Sin(i*x)/(x_pow);
+                x_pow *= x;
+            }
             // end
 
             return answer;
         }
-
         public double Task2(int n)
         {
             double answer = 0;
 
+            double a = (-1) * 5.0 / 1.0;
             // code here
+            for (int i = 1; i <= n; i++) {
+
+                answer += a;
+                a *= (-1) * 5.0 / (i + 1);
+            }
 
             // end
 
@@ -33,8 +42,16 @@ namespace Lab2
         {
             long answer = 0;
 
+            long fib_a = 0;
+            long fib_b = 1;
             // code here
+            for (int i = 1; i <= n; i++)
+            {
 
+                answer += fib_a;
+                fib_b += fib_a;          
+                fib_a = fib_b - fib_a ;
+            }
             // end
 
             return answer;
@@ -42,9 +59,16 @@ namespace Lab2
         public int Task4(int a, int h, int L)
         {
             int answer = 0;
-
+            double sm = 0;
+            int n = 1;
             // code here
+            while (sm + (a + (n - 1) * h) <= L){
 
+                sm += ( a + (n - 1) * h );
+                n++;
+                
+            }
+            answer = n-1;
             // end
 
             return answer;
@@ -52,9 +76,19 @@ namespace Lab2
         public double Task5(double x)
         {
             double answer = 0;
-
+            double ch = 0;
+            double zn = 1;
+            double elem = ch / zn;
+            int i = 1;
             // code here
-
+            do
+            {
+                ch += i;
+                zn *= x;
+                answer += elem;
+                elem = ch / zn;
+                i++;
+            } while (elem > 0.0001);
             // end
 
             return answer;
@@ -63,8 +97,15 @@ namespace Lab2
         {
             int answer = 0;
 
+            long c = S;
+            int t = 0;
             // code here
-
+            while (c < L)
+            {
+                c *= 2;
+                t += h;
+            }
+            answer = t;
             // end
 
             return answer;
@@ -78,7 +119,7 @@ namespace Lab2
             // code here
             double p = S;
             a += p;
-            for (int i = 0; i<6; i++)
+            for (int i = 0; i < 6; i++)
             {
                 p = p + (I / 100) * p;
                 a += p;
@@ -98,8 +139,7 @@ namespace Lab2
                 c++;
             }
             // end
-            
-        
+
             return (a, b, c);
         }
         public (double SS, double SY) Task8(double a, double b, double h)
@@ -109,14 +149,14 @@ namespace Lab2
 
             // code here
             double sm = 0;
-            for (double x = a; x <= b + 0.0001; x+=h)
+            for (double x = a; x <= b + 0.0001; x += h)
             {
                 Console.WriteLine(x);
                 sm = 0;
                 double x_pow = 1;
                 double i_fact = 1;
                 int i = 0;
-                double el = ( (2 * i + 1) * x_pow )/ (i_fact);
+                double el = ((2 * i + 1) * x_pow) / (i_fact);
                 while (Math.Abs(el) > 0.0001)
                 {
 
