@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
+using System.Xml;
 
 namespace Lab2
 {
@@ -57,10 +58,13 @@ namespace Lab2
 
             while (Math.Abs(qi) >= E)
             {
-                qi = Math.Pow(q, n) * b;
+                double qn = 1;
+                for (int i = 0; i < n; i++)
+                    qn *= q;
+
+                qi = qn * b;
                 n++;
             }
-
 
             return n;
         }
