@@ -76,10 +76,16 @@ namespace Lab2
         public double Task6(double x)
         {
             double answer = 0;
-            double s = 1;
-            double eps = 0.0001;
-            while ()
-            
+            double eps = 1e-4;
+            double sum = 0;
+            double term = 1;
+
+            while (Math.Abs(term) >= eps)
+            {
+                sum += term;
+                term *= x * x;
+            }
+            answer = sum;
 
             return answer;
         }
@@ -87,25 +93,39 @@ namespace Lab2
         public int Task7(int n)
         {
             int answer = 0;
+            int sum = 0;
+            while (sum < n)
+            {
+                if (sum < n)
+                {
+                    answer++;
+                    sum += answer;
+                }
+                
+            }
 
-            // code here
-
-            // end
-
-            return answer;
+            return answer;    
         }
         public int Task8(double L, double v)
         {
             int answer = 0;
-            const double R = 6371.0; // радиус Земли, км
+            const double R = 6371.0;
+            for(int t = 0; t < 1000; t++)
+            {
+                double h = v * t;
+                double kat1 = R + h;
+                
+                double l = kat1*kat1 - R*R;
+                if (Math.Sqrt(l) > L)
+                {
+                    answer = t; break;
+                }
+            }
 
-            // code here
-
-            // end
+            
 
             return answer;
         }
     }
 
 }
-=
