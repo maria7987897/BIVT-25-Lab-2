@@ -31,10 +31,8 @@ namespace Lab2
         }
         public double Task3()
         {
-            double prevCh = 1;
-            double prevZn = 1;
-            double prevPrevCh = 1;
-            double prevPrevZn = 1;
+            double prevPrevCh = 1, prevPrevZn = 1;
+            double prevCh = 2, prevZn = 1;
 
             while (true)
             {
@@ -63,7 +61,7 @@ namespace Lab2
                 n++;
             }
 
-            
+
             return n;
         }
 
@@ -104,28 +102,56 @@ namespace Lab2
         public int Task7(double S, double d)
         {
             int months = 0;
-            double year = S * (d / 100.0);
-            double copy = 2 * S;
-            while (S < copy)
+            double target = 2 * S;
+            double year = S * (d / 100.0); 
+
+            while (S < target)
             {
                 months++;
-
+                S += year / 12.0;
                 if (months % 12 == 0)
                     year = S * (d / 100.0);
-                S += year / 12.0; 
             }
 
             return months;
         }
 
+
         public (double SS, double SY) Task8(double a, double b, double h)
         {
-            double SS = 0;
-            double SY = 0;
+            double SS = 0; 
+            double SY = 0; 
+            double epsilon = 0.0001; 
 
+            for (double x = a; x <= b + E; x += h)
+            {
+                double sum_series = 0;
+                int i = 0;
+                double term = 1;
+               
+                while (Math.Abs(term) > epsilon)
+                {
+                    int factorial = 1;
+                    for (int j = 1; j <= 2 * i; j++)
+                        factorial *= j;
 
+                    int first = i % 2 == 0 ? 1 : -1;
+
+                    double second = 1;
+                    for (int j = 0; j < 2 * i; j++)
+                        second *= x;
+
+                    term = first * second / factorial;
+                    sum_series += term;
+                    i++;
+                } 
+
+                SS += sum_series;
+                SY += Math.Cos(x);
+            }
 
             return (SS, SY);
         }
+
     }
 }
