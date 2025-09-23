@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/error/.nuget/packages/": {}
+    "/Users/lukapuhlak/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/error/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj",
+      "projectUniqueName": "/Users/lukapuhlak/code/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj",
       "projectName": "Lab2",
-      "projectPath": "/home/error/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj",
-      "packagesPath": "/home/error/.nuget/packages/",
-      "outputPath": "/home/error/misis/BIVT-25-Lab-2/Lab2/obj/",
+      "projectPath": "/Users/lukapuhlak/code/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj",
+      "packagesPath": "/Users/lukapuhlak/.nuget/packages/",
+      "outputPath": "/Users/lukapuhlak/code/misis/BIVT-25-Lab-2/Lab2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/error/.nuget/NuGet/NuGet.Config"
+        "/Users/lukapuhlak/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -44,7 +44,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -63,15 +63,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.19, 8.0.19]"
+            "version": "[8.0.20, 8.0.20]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[8.0.19, 8.0.19]"
+            "name": "Microsoft.NETCore.App.Host.osx-x64",
+            "version": "[8.0.20, 8.0.20]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.19, 8.0.19]"
+            "version": "[8.0.20, 8.0.20]"
           }
         ],
         "frameworkReferences": {
@@ -79,7 +79,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "z1bc0lpu61M=",
+  "dgSpecHash": "cktQMnHXa4M=",
   "success": true,
-  "projectFilePath": "/home/error/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj",
+  "projectFilePath": "/Users/lukapuhlak/code/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj",
   "expectedPackageFiles": [
-    "/home/error/.nuget/packages/microsoft.netcore.app.ref/8.0.19/microsoft.netcore.app.ref.8.0.19.nupkg.sha512",
-    "/home/error/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.19/microsoft.aspnetcore.app.ref.8.0.19.nupkg.sha512",
-    "/home/error/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.19/microsoft.netcore.app.host.linux-x64.8.0.19.nupkg.sha512"
+    "/Users/lukapuhlak/.nuget/packages/microsoft.netcore.app.ref/8.0.20/microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
+    "/Users/lukapuhlak/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.20/microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512",
+    "/Users/lukapuhlak/.nuget/packages/microsoft.netcore.app.host.osx-x64/8.0.20/microsoft.netcore.app.host.osx-x64.8.0.20.nupkg.sha512"
   ],
   "logs": []
 }

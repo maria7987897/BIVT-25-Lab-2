@@ -2553,19 +2553,19 @@
     ]
   },
   "packageFolders": {
-    "/home/error/.nuget/packages/": {}
+    "/Users/lukapuhlak/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/error/misis/BIVT-25-Lab-2/Lab2test/Lab2test.csproj",
+      "projectUniqueName": "/Users/lukapuhlak/code/misis/BIVT-25-Lab-2/Lab2test/Lab2test.csproj",
       "projectName": "Lab2test",
-      "projectPath": "/home/error/misis/BIVT-25-Lab-2/Lab2test/Lab2test.csproj",
-      "packagesPath": "/home/error/.nuget/packages/",
-      "outputPath": "/home/error/misis/BIVT-25-Lab-2/Lab2test/obj/",
+      "projectPath": "/Users/lukapuhlak/code/misis/BIVT-25-Lab-2/Lab2test/Lab2test.csproj",
+      "packagesPath": "/Users/lukapuhlak/.nuget/packages/",
+      "outputPath": "/Users/lukapuhlak/code/misis/BIVT-25-Lab-2/Lab2test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/error/.nuget/NuGet/NuGet.Config"
+        "/Users/lukapuhlak/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2577,8 +2577,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/error/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj": {
-              "projectPath": "/home/error/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj"
+            "/Users/lukapuhlak/code/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj": {
+              "projectPath": "/Users/lukapuhlak/code/misis/BIVT-25-Lab-2/Lab2/Lab2.csproj"
             }
           }
         }
@@ -2593,7 +2593,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -2626,15 +2626,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.19, 8.0.19]"
+            "version": "[8.0.20, 8.0.20]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[8.0.19, 8.0.19]"
+            "name": "Microsoft.NETCore.App.Host.osx-x64",
+            "version": "[8.0.20, 8.0.20]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.19, 8.0.19]"
+            "version": "[8.0.20, 8.0.20]"
           }
         ],
         "frameworkReferences": {
@@ -2642,7 +2642,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.109/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
