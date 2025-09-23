@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Numerics;
 using System.Runtime.InteropServices;
+
 
 namespace Lab2
 {
@@ -10,38 +13,67 @@ namespace Lab2
         public int Task1(int n, int p, int h)
         {
             int answer = 0;
-
+            int s = 0;
+            for (int i = 0; i < n; i++)
+            {
+                s += ((p + i * h) * (p + i * h));
+            }
             // code here
 
             // end
 
-            return answer;
+            return s;
         }
         public (int quotient, int remainder)  Task2(int a, int b)
         {
             int quotient = 0;
             int remainder = 0;
 
-            // code here
-
-            // end
-
+            while (a >= b)
+            {
+                quotient++;
+                a -= b;
+            }
+            remainder = a;
             return (quotient, remainder);
         }
         public double Task3()
         {
             double answer = 0;
 
-            // code here
+            int ch1 = 1;
+            int zn1 = 1;
+            int ch2 = 2;
+            int zn2 = 1;
+            int ch3 = ch1 + ch2;
+            int zn3 = zn2 + zn2;
+            while (Math.Abs((decimal)ch2 / zn2 - (decimal)ch3 / zn3) >= ((decimal)0.0001))
+            {
+                ch3 += ch2;
+                zn3 += zn2;
+                ch2 = ch3 - ch2;
+                zn2 = zn3 - zn2;
+            }
+            answer = (double) ch3 / zn3;
 
-            // end
 
-            return answer;
+                // code here
+
+                // end
+
+                return answer;
         }
         public int Task4(double b, double q)
         {
             int answer = 0;
-
+            double e = 0.0001;
+            answer = 1;
+            double s = b;
+            while (Math.Abs(s) > e)
+            {
+                answer ++;
+                s = b * Math.Pow(q, answer-1);
+            }
             // code here
 
             // end
@@ -51,31 +83,53 @@ namespace Lab2
         public int Task5(int a, int b)
         {
             int answer = 0;
+            long number = a;
 
-            // code here
-
-            // end
-
+            while (b > 0){
+                number *= b;
+                b--;
+            }
+            while (number >= 10) { 
+            
+                number /= 10;
+                answer++;
+             
+            }
             return answer;
         }
         public long Task6()
         {
-            long answer = 0;
+            double answer = 0;          
+            double c1 = 1;
 
-            // code here
-
-            // end
-
-            return answer;
+            for (int i = 0; i < 64; i++)
+            {
+                answer += c1;
+                //c1 /= 15;
+                c1 *= 2;
+            }
+            
+            
+            return (long)(answer/(1_000_000 * 15));
         }
 
         public int Task7(double S, double d)
         {
             int answer = 0;
+            double x1 = S;
+            double x2 = S;
 
-            // code here
+            double p = d / 12 / 100;
 
-            // end
+            while (x1 < S * 2)
+            {
+                x1 += x2 * p;
+                answer ++;
+                if (answer % 12 == 0)
+                {
+                    x2 = x1;
+                }
+            }
 
             return answer;
         }
@@ -83,12 +137,32 @@ namespace Lab2
         {
             double SS = 0;
             double SY = 0;
+            
 
-            // code here
+            for (double x = a; x - b <= 0.0001; x += h)
+            {
+                double y = Math.Cos(x);
+                SY += y;
+                               
+                double sx = 1; 
+                double t = 1;
+                int i = 1;
+                double x2 = x * x;
 
-            // end
+                while (Math.Abs(t) >= 0.0001)
+                {
+                    
+                    t = -t * x2 / ((2 * i - 1) * (2 * i));
+                    sx += t;
+                    i ++;
+                }
+
+                SS += sx;
+            }
 
             return (SS, SY);
         }
+
+
     }
 }
