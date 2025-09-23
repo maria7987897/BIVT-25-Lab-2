@@ -102,12 +102,18 @@ namespace Lab2
             double elem = ch / zn;
             int i = 1;
 
+            ch += i;
+            zn *= x;
+            answer += elem;
+            elem = ch / zn;
+            i++;
+
             while (elem > 0.0001)
             {
                 ch += i;
                 zn *= x;
-                elem = ch / zn;
                 answer += elem;
+                elem = ch / zn;
                 i++;
             }
             // end
@@ -172,7 +178,19 @@ namespace Lab2
             double SY = 0;
 
             // code here
-
+            double x = a;
+            while (x <= b + E)
+            {
+                double c = 1.0;
+                SS += c;
+                for (double i = 1; c > E; ++i)
+                {
+                    c = (2 * i + 1) * c * x * x / (i * (2 * i - 1));
+                    SS += c;
+                }
+                SY += (1 + 2 * x * x) * Math.Exp(x * x);
+                x += h;
+            }
             // end
 
             return (SS, SY);
