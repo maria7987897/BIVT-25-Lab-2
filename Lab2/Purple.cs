@@ -12,7 +12,7 @@ namespace Lab2
             int answer = 0;
 
             for (int i = 0; i < n; i++)
-                answer += (p + n * h) * (p + n * h);
+                answer += (p + i * h) * (p + i * h);
 
             return answer;
         }
@@ -54,16 +54,17 @@ namespace Lab2
 
         public int Task4(double b, double q)
         {
-            int i = 0;
+            int n = 0;
             double qi = 1;
 
-            while (b * qi >= E)
+            while (Math.Abs(qi) >= E)
             {
-                qi *= q;
-                i++;
+                qi = Math.Pow(q, n) * b;
+                n++;
             }
 
-            return i;
+            
+            return n;
         }
 
         public int Task5(int a, int b)
@@ -77,7 +78,7 @@ namespace Lab2
                 b--;
             }
 
-            while (number <= 10)
+            while (number >= 10)
             {
                 number /= 10;
                 answer++;
@@ -102,14 +103,16 @@ namespace Lab2
 
         public int Task7(double S, double d)
         {
-            double copy = S;
-            double monthlyRate = d / 100.0 / 12.0;
             int months = 0;
-
-            while (copy < 2.0 * S)
+            double year = S * (d / 100.0);
+            double copy = 2 * S;
+            while (S < copy)
             {
-                copy *= (1.0 + monthlyRate);
                 months++;
+
+                if (months % 12 == 0)
+                    year = S * (d / 100.0);
+                S += year / 12.0; 
             }
 
             return months;
