@@ -151,11 +151,22 @@ namespace Lab2
             double SY = 0;
 
             // code here
-            double el = 0;
-            while (el > E)
+            for (double x = a; x <= b; x += h)
             {
-                break;
-                //cock
+                double el = 1;
+                int i = 0;
+                int factI = 1;
+                x = Math.Round(x, 2);
+                double xStep = 1;
+                while (Math.Abs(el) > E)
+                {
+                    el = ((2 * i + 1) * xStep) / factI;
+                    SS += el;
+                    i++;
+                    factI *= i;
+                    xStep *= x * x;
+                }
+                SY += (1 + 2 * x*x) * Math.Pow(Math.Exp(1), x*x);
             }
             // end
 

@@ -13,7 +13,7 @@ namespace Lab2
             Console.WriteLine(blue.Task5(1.1));
             Console.WriteLine(blue.Task6(1, 1, 100));
             Console.WriteLine(blue.Task7(1, 0.1));
-            Console.WriteLine(blue.Task8(1, 0.1, 0));
+            Console.WriteLine(blue.Task8(0.1, 0.99, 0.01));
         }
     }
 }
