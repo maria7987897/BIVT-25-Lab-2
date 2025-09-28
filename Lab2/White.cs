@@ -8,7 +8,10 @@
             int answer = 0;
 
             // code here
-
+            for (int i = 1; i <= n; i++)
+            {
+                answer+= 3*i - 1;
+            }
             // end
 
             return answer;
@@ -67,9 +70,14 @@
         public int Task7(int n)
         {
             int answer = 0;
-
             // code here
-
+            int sum = 0;
+            int n;
+            for(int n = 0; sum < n; n++)
+            {
+                answer++;
+                sum+=answer;
+            }
             // end
 
             return answer;
@@ -88,3 +96,4 @@
     }
 
 }
+
