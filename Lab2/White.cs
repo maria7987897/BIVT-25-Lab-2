@@ -16,6 +16,11 @@
 
             return answer;
         }
+
+
+
+
+        
         public double Task2(int n)
         {
             double answer = 0;
@@ -28,6 +33,13 @@
 
             return answer;
         }
+
+
+
+
+
+
+        
         public long Task3(int n)
         {
             long answer = 0;
@@ -40,26 +52,55 @@
             // end
             return answer;
         }
+
+
+
+
+
+        
         public long Task4(int a, int b)
         {
             long answer = 0;
-
             // code here
-
+            if (b == 0)
+            {
+                return 1;
+            }
+            if (b < 0)
+            {
+                b = Math.abs(b);
+            }
+            
+            for (int i = 0; i < b; i++)
+            {
+                answer *= a;
+            }
             // end
-
             return answer;
         }
+
+
+
+
+
+
+        
         public int Task5(int L)
         {
             int answer = 0;
-
             // code here
-
+            
             // end
-
             return answer;
         }
+
+
+
+
+
+
+
+        
         public double Task6(double x)
         {
             double answer = 0;
@@ -70,6 +111,14 @@
 
             return answer;
         }
+
+        
+
+
+
+
+
+        
 
         public int Task7(int n)
         {
@@ -86,6 +135,15 @@
 
             return answer;
         }
+
+
+
+
+
+
+
+
+        
         public int Task8(double L, double v)
         {
             int answer = 0;
@@ -100,6 +158,7 @@
     }
 
 }
+
 
 
 
