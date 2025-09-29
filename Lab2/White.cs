@@ -19,9 +19,11 @@
         public double Task2(int n)
         {
             double answer = 0;
-
             // code here
-
+            for (int i = 1; i <= n; i++);
+            {
+                answer+= 1 / (i - 1);
+            }
             // end
 
             return answer;
@@ -96,4 +98,5 @@
     }
 
 }
+
 
