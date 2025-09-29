@@ -22,7 +22,7 @@
             // code here
             for (int i = 1; i <= n; i++);
             {
-                answer+= 1 / (i - 1);
+                answer+= 1.0 / i;
             }
             // end
 
@@ -31,11 +31,13 @@
         public long Task3(int n)
         {
             long answer = 0;
-
             // code here
-
+            if (n >= 0)
+                for (int n = 1; i <= n; i++);
+                {
+                    answer*=n
+                }
             // end
-
             return answer;
         }
         public long Task4(int a, int b)
@@ -98,5 +100,6 @@
     }
 
 }
+
 
 
