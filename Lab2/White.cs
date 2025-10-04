@@ -139,8 +139,3 @@ namespace Lab2
 
 
 
-
-
-
-
-
