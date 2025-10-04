@@ -42,14 +42,16 @@
         
         public long Task3(int n)
         {
-            long answer = 0;
+            long answer = 1;
             // code here
-            if (n >= 0)
-                for (int n = 1; i <= n; i++);
+            if (n>=0)
+            {
+                for (int i = 1; i <= n; i++)
                 {
-                    answer*=n
+                    answer*=i;
                 }
-            // end
+            }
+            //end
             return answer;
         }
 
@@ -158,6 +160,7 @@
     }
 
 }
+
 
 
 
