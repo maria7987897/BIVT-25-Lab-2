@@ -176,13 +176,17 @@
         {
             int answer = 0;
             const double R = 6371.0; // радиус Земли, км
-            // code here
-            // end
+            double h = Math.Sqrt(R * R + L * L) - R; // расчёт высоты, на которую нужно подняться
+            double t = h / v;                        // время подъёма
+            int answer = (int)Math.Round(t);          // округляем время до ближайшего целого
             return answer;
+            // end
+            //return answer;
         }
     }
-
+    
 }
+
 
 
 
