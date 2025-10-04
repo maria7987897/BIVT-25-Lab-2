@@ -62,21 +62,28 @@
         
         public long Task4(int a, int b)
         {
-            long answer = 0;
+            long answer = 1;
             // code here
             if (b == 0)
             {
-                return 1;
+                return 1.0;
             }
+            bool otric = false;
             if (b < 0)
-            {
+            {    
+                otric = true;
                 b = Math.abs(b);
             }
-            
             for (int i = 0; i < b; i++)
             {
                 answer *= a;
             }
+
+            if otric 
+            {
+                answer = 1.0 / answer;
+            }
+      
             // end
             return answer;
         }
@@ -160,6 +167,7 @@
     }
 
 }
+
 
 
 
