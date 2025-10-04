@@ -1,4 +1,4 @@
-﻿namespace Lab2
+namespace Lab2
 {
     public class White
     {
@@ -8,174 +8,134 @@
             int answer = 0;
 
             // code here
+            
             for (int i = 1; i <= n; i++)
             {
-                answer+= (3*i - 1);
+                answer += (3 * i - 1);
+                
+
             }
             // end
 
                 return answer;
         }
-
-
-
-
-        
         public double Task2(int n)
         {
             double answer = 0;
+
             // code here
-            for (int i = 1; i <= n; i++);
+            for (double i = 1; i <= n; i++)
             {
-                answer+= 1 / i;
+                answer += 1 / i;
             }
+
             // end
 
                 return answer;
         }
-
-
-
-
-
-
-        
         public long Task3(int n)
         {
             long answer = 1;
-            // code here
 
+            // code here
             for (int i = 1; i <= n; i++)
             {
-                answer*=i;
+                answer *= i;
             }
-            //end
+            // end
+
                 return answer;
         }
-
-
-
-
-
-        
         public long Task4(int a, int b)
         {
             long answer = 1;
+
             // code here
-            //if (b == 0)
-            //{
-              //  return 1.0;
-            //}
-            //bool otric = false;
-            //if (b < 0)
-            //{    
-             //   otric = true;
-             //   b = Math.abs(b);
-            //}
             for (int i = 1; i <= b; i++)
             {
                 answer *= a;
+            
             }
-
-            //if (otric) 
-            //{
-                //answer = 1.0 / answer;
-            //}
-      
+            
             // end
-                return answer;
+
+            return answer;
         }
-
-
-
-
-
-
-        
         public int Task5(int L)
         {
-            int answer = 1; // n
+            int answer = 1;
+
+
             // code here
             int p = 1;
-            while ( answer <= L)
+            while (answer <= L)
             {
-                p+=3;
-                answer*=p;
+                p += 3;
+                answer *= p;
             }
             answer = p;
             // end
-                return answer;
+
+            return answer;
         }
-
-
-
-
-
-
-
-        
         public double Task6(double x)
         {
-            double answer = 1; // s
+            double answer = 1;
+             
+
             // code here
-            double pow = x *x;
+            double pow = x * x;
+
             while (pow >= E)
             {
-                answer+=pow;
-                pow*=x*x;
+                answer += pow;
+                pow *= x * x;
+                
+                
             }
             // end
-                return answer;
+
+            return answer;
         }
-
-        
-
-
-
-
-
         
 
         public int Task7(int n)
         {
             int answer = 0;
+
             // code here
             int sum = 0;
             while (sum < n)
             {
-                snswer++;
-                sum+=answer;
+                answer++;
+                sum += answer;
             }
+
             // end
+
                 return answer;
         }
-
-
-
-
-
-
-
-
-        
         public int Task8(double L, double v)
         {
             int answer = 0;
             int R = 6371;
-            double d = 0;
+
+            // code here
+            double D = 0;
             double h = v;
-            while (b <= L)
+            while (D <= L)
             {
-                d = Math.Sqrt((R+h) * (R+h) - R*R);
-                h+=v;
+                D = Math.Sqrt((R + h) * (R + h) - R * R);
+                h += v;
                 answer++;
             }
+
+            // end
+
                 return answer;
         }
     }
-    
 }
-
 
 
 
