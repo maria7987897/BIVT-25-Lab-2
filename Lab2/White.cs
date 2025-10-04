@@ -62,7 +62,7 @@
         
         public long Task4(int a, int b)
         {
-            long answer = 1;
+            long answer = 1.0;
             // code here
             if (b == 0)
             {
@@ -79,7 +79,7 @@
                 answer *= a;
             }
 
-            if otric 
+            if (otric) 
             {
                 answer = 1.0 / answer;
             }
@@ -96,11 +96,17 @@
         
         public int Task5(int L)
         {
-            int answer = 0;
+            int answer = 1; // n
             // code here
+            int p = 1;
+            while ( p <= L)
+            {
+                p*=(3*answer-2);
+                answer+=1;
+            }
             
             // end
-            return answer;
+            return answer - 1;
         }
 
 
@@ -112,13 +118,22 @@
         
         public double Task6(double x)
         {
-            double answer = 0;
-
+            double answer = 1.0; // s
             // code here
-
+            double epsilon = Math.Pow(10, -4);
+            doube term = 1.0; //очередной член ряда
+            int n = 0; // степень двойки
+            do
+            {
+                n++;
+                term*= x*x;
+                answer+=term;
+            }
+            
+            while (term >= epsilon)
+                return answer;
             // end
-
-            return answer;
+            //return answer;
         }
 
         
@@ -134,15 +149,19 @@
             int answer = 0;
             // code here
             int sum = 0;
-            int n;
-            for(int n = 0; sum < n; n++)
+            if (sum < n)
             {
-                answer++;
-                sum+=answer;
+                for(int n = 0; sum < n; n++)
+                {
+                    answer++;
+                    sum+=answer;
+                }
+                
+            if (sum >= 0)
+            {
+                return answer;
             }
             // end
-
-            return answer;
         }
 
 
@@ -157,16 +176,14 @@
         {
             int answer = 0;
             const double R = 6371.0; // радиус Земли, км
-
             // code here
-
             // end
-
             return answer;
         }
     }
 
 }
+
 
 
 
